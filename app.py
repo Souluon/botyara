@@ -29,7 +29,7 @@ def echo_all(message):
 def photo(message):
 	word = message.caption
 	if not word:
-		word = 'text'
+		word = 'Souluon'
 	fileID = message.photo[-1].file_id
 	file_info = bot.get_file(fileID)
 	downloaded_file = bot.download_file(file_info.file_path)
@@ -58,5 +58,3 @@ def getMessage():
 
 if __name__ == "__main__":
 	server.run(host="0.0.0.0", port = int(os.environ.get("PORT", 5000)))
-
-
